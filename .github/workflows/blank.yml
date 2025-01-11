@@ -1,6 +1,6 @@
 name: Test Node with workflow
 on: push
-job:
+jobs:
   first-job:
     name: build with Node
     runs-on: ubuntu-latest
