@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     container: node:12.18.4
     steps:
+      - uses: actions/checkout@v4
       - run: node --version
       - run: npm --version
       - run: npm install
