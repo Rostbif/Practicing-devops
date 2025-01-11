@@ -7,13 +7,17 @@ jobs:
     container:
       image: node:latest
     steps:
-      - uses: actions/checkout@v4
-      - run: node --version
-      - run: npm --version
+      - name: Check Node.js version
+        run: node --version
+      - name: Check NPM version
+        run: npm --version
+      - name: Checkout my code
+        uses: actions/checkout@v4
       - run: npm install
-      - name: run a one line scripte
+      - name: Running one line code
         run: echo Hello, Ofir!
-      - run: node index.js
+      - name: Execute Node application
+        run: node index.js
 # # This is a basic workflow to help you get started with Actions
 
 # name: Test Node with workflow
