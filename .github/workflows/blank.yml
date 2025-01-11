@@ -4,7 +4,8 @@ jobs:
   first-job:
     name: build with Node
     runs-on: ubuntu-latest
-    container: node:12.18.4
+    container:
+      image: node:latest
     steps:
       - uses: actions/checkout@v4
       - run: node --version
